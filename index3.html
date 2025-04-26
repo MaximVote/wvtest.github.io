@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => {
+          const a = document.createElement('a');
+          a.href = 'x-safari-https://example.com';
+          a.target = '_blank';
+          a.rel = 'noopener noreferrer';
+          document.body.appendChild(a);
+          a.click();
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="src/style.css" />
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      setTimeout(() => {
-        window.open('https://example.com', '_blank')
-      }, 2000); // 2 seconds delay
-    });
-  </script>
-</head>
-
-<body>
-  Window opened after 2 seconds
-</body>
-
+          alert('3 seconds passed — Link was clicked!');
+        }, 3000); // 3000 milliseconds = 3 seconds
+      });
+    </script>
+  </head>
+  <body>
+    New button click
+  </body>
 </html>
