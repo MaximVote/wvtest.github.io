@@ -4,20 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        setTimeout(() => {
-          const a = document.createElement('a');
-          a.href = 'https://example.com';
-          a.target = '_blank';
-          a.rel = 'noopener noreferrer';
-          document.body.appendChild(a);
-          a.click();
-
-          alert('3 seconds passed — Link was clicked!');
-        }, 3000); // 3000 milliseconds = 3 seconds
-      });
-    </script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      window.location.href = 'x-safari-https://example.com';
+      alert('This line will probably never run because page will unload.');
+    }, 3000);
+  });
+</script>
   </head>
   <body>
     New button click 2
