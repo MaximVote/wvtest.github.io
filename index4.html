@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="src/style.css" />
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      const isAndroid = /android/i.test(userAgent);
+      const isIOS = /iPhone|iPad|iPod/i.test(userAgent);
+
+      setTimeout(() => {
+        if (isAndroid) {
+          window.location.href = 'intent://example.com#Intent;scheme=https;package=com.android.chrome;end';
+        } else if (isIOS) {
+          window.location.href = 'x-safari-https://example.com';
+        } else {
+          window.location.href = 'https://example.com';
+        }
+      }, 0);
+    });
+  </script>
+</head>
+
+<body>
+  Universal
+</body>
+
+</html>
