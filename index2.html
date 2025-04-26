@@ -6,9 +6,15 @@
     <link rel="stylesheet" href="src/style.css" />
     <script>
       console.log('useragent', window.navigator.userAgent);
+      document.getElementById('ua').innerHTML = window.navigator.userAgent;
     </script>
   </head>
   <body>
+    <a href="index.html">page1</a> | <a href="index2.html">page2</a> | <a href="index3.html">page3</a>
+    <hr/>
+    UserAgent:
+    <div id="ua">TBD</div>
+    <hr/>
     <h1>Android</h1>
     <h3>Using Intent:</h3>
     <button onclick="window.location = 'intent:https://example.com#Intent;end'">
