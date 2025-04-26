@@ -9,18 +9,20 @@
     </script>
   </head>
   <body>
-    <h1>Using Intent:</h1>
+    <h1>Android</h1>
+    <h3>Using Intent:</h3>
     <button onclick="window.location = 'intent:https://example.com#Intent;end'">
       intent:
     </button>
+    <hr/>
+    <a href="intent:https://example.com#Intent;end">intent:</a>
     <ul>
-      <li>YES: Android + FB Webview</li>
-      <li>NO: ios + IG Webview</li>
+      <li>Android + FB Webview: BUTTON AND LINK YES, "Youre leaving our app"</li>
+      <li>NO: ios + IG Webview: no obv</li>
     </ul>
     <hr/>
-    <a href="intent:https://example.com#Intent;end">x-safari-https://</a>
-    <hr/>
-    <h1>Using x-safari-https:</h1>
+    <h1>iOS</h1>
+    <h3>Using x-safari-https:</h3>
     <button onclick="window.location = 'x-safari-https://example.com'">
       x-safari-https://
     </button>
@@ -36,7 +38,8 @@
       <li>ios + IG Webview: nothing, no error</li>
     </ul>
     <hr/>
-    <h1>Using window.open:</h1>
+    <h1>Universal</h1>
+    <h3>Using window.open:</h3>
     <button onclick="window.open('https://example.com', '_blank')">
       window.open
     </button>
@@ -45,7 +48,7 @@
       <li>NO: ios + IG Webview</li>
     </ul>
     <hr/>
-    <h1>Using window.location.href:</h1>
+    <h3>Using window.location.href:</h3>
     <button onclick="window.location.href = 'https://example.com'">
       window.location.href
     </button>
