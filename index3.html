@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
+    <script>
+      console.log('useragent', window.navigator.userAgent);
+      document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('ua').innerHTML = window.navigator.userAgent;
+      })
+    </script>
+  </head>
+  <body>
+    <a href="index.html">page1</a> | <a href="index2.html">page2</a> | <a href="index3.html">page3</a>
+    <hr/>
+    <a href="https://inappdebugger.com">In App Debugger</a>
+    <hr/>
+    UserAgent:
+    <div id="ua">TBD</div>
+    <hr/>
+    <h1>Android</h1>
+    <h3>Using Intent:</h3>
+    <button onclick="window.location = 'intent:https://example.com#Intent;end'">
+      intent:
+    </button>
+    <hr/>
+    <a href="intent:https://example.com#Intent;end">intent:</a>
+    <ul>
+      <li>Android 15 + FB Webview: BUTTON AND LINK YES, "Youre leaving our app"</li>
+      <li>NO: ios + IG Webview: no obv</li>
+    </ul>
+    <hr/>
+    <h1>iOS</h1>
+    <h3>Using Shortcuts:</h3>
+    <a href="shortcuts://x-callback-url/run-shortcut?name=1sfd2asdfadsf34&x-error=https%3A%2F%2Fexample.com" target="_blank">shortcuts: with _blank</a>
+    <ul>
+      <li>Android 15 + FB Webview: ?"</li>
+      <li>ios 16.7 + IG Webview: shortcuts worked!</li>
+    </ul>
+
+    <h3>Using x-safari-https:</h3>
+    <button onclick="window.location = 'x-safari-https://example.com'">
+      x-safari-https://
+    </button>
+    <ul>
+      <li>Android 15 + FB Webview: Error toast "page cant be loaded"</li>
+      <li>ios + IG Webview: nothing, no error</li>
+    </ul>
+    <hr/>
+    <a href="x-safari-https://example.com" target="_blank">x-safari-https:// with _blank</a>
+    <br/>
+    <ul>
+      <li>Android 15 + FB Webview: Error toast "page cant be loaded"</li>
+      <li>ios 17:</li>
+      <li>ios 16.7 + IG Webview: nothing, no error</li>
+    </ul>
+    <hr/>
+    <h1>Universal</h1>
+    <h3>Using window.open:</h3>
+    <button onclick="window.open('https://example.com', '_blank')">
+      window.open
+    </button>
+    <ul>
+      <li>Android 15 + FB Webview: stays in webview</li>
+      <li>ios 17:</li>
+      <li>ios 16.7 + IG Webview:</li>
+    </ul>
+    <hr/>
+    <h3>Using window.location.href:</h3>
+    <button onclick="window.location.href = 'https://example.com'">
+      window.location.href
+    </button>
+    <ul>
+      <li>Android 15 + FB Webview: stays in webview</li>
+      <li>ios 17:</li>
+      <li>ios 16.7 + IG Webview</li>
+    </ul>
+  </body>
+</html>
