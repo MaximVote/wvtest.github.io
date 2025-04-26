@@ -4,25 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
+    <script>
+      console.log('useragent', window.navigator.userAgent);
+    </script>
   </head>
   <body>
     <h1>Using Intent:</h1>
     <button onclick="window.location = 'intent:https://example.com#Intent;end'">
-      Open Intent Link
+      intent:
     </button>
-    <p>Works in:<ul>
+    <ul>
       <li>YES: Android + FB Webview</li>
-      <li>NO: </li>
-    </ul></p>
+      <li>NO: ios + IG Webview</li>
+    </ul>
+    <hr/>
+    <h1>Using x-safari-https:</h1>
+    <button onclick="window.location = 'x-safari-https://example.com'">
+      x-safari-https://
+    </button>
+    <ul>
+      <li>?: Android + FB Webview</li>
+      <li>?: ios + IG Webview</li>
+    </ul>
     <hr/>
     <h1>Using window.open:</h1>
     <button onclick="window.open('https://example.com', '_blank')">
-      Open New Window
+      window.open
     </button>
+    <ul>
+      <li>NO: Android + FB Webview</li>
+      <li>NO: ios + IG Webview</li>
+    </ul>
     <hr/>
     <h1>Using window.location.href:</h1>
     <button onclick="window.location.href = 'https://example.com'">
-      Redirect to Example.com
+      window.location.href
     </button>
+    <ul>
+      <li>NO: Android + FB Webview</li>
+      <li>NO: ios + IG Webview</li>
+    </ul>
   </body>
 </html>
