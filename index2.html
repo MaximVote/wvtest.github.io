@@ -25,25 +25,33 @@
     <hr/>
     <a href="intent:https://example.com#Intent;end">intent:</a>
     <ul>
-      <li>Android + FB Webview: BUTTON AND LINK YES, "Youre leaving our app"</li>
+      <li>Android 15 + FB Webview: BUTTON AND LINK YES, "Youre leaving our app"</li>
       <li>NO: ios + IG Webview: no obv</li>
     </ul>
     <hr/>
     <h1>iOS</h1>
+    <h3>Using Shortcuts:</h3>
+    <a href="shortcuts://x-callback-url/run-shortcut?name=1sfd2asdfadsf34&x-error=https%3A%2F%2Fexample.com" target="_blank">shortcuts: with _blank</a>
+    <ul>
+      <li>Android 15 + FB Webview: ?"</li>
+      <li>ios 16.7 + IG Webview: shortcuts worked!</li>
+    </ul>
+
     <h3>Using x-safari-https:</h3>
     <button onclick="window.location = 'x-safari-https://example.com'">
       x-safari-https://
     </button>
     <ul>
-      <li>Android + FB Webview: Error toast "page cant be loaded"</li>
+      <li>Android 15 + FB Webview: Error toast "page cant be loaded"</li>
       <li>ios + IG Webview: nothing, no error</li>
     </ul>
     <hr/>
-    <a href="x-safari-https://example.com">x-safari-https://</a>
+    <a href="x-safari-https://example.com" target="_blank">x-safari-https:// with _blank</a>
     <br/>
     <ul>
-      <li>Android + FB Webview: Error toast "page cant be loaded"</li>
-      <li>ios + IG Webview: nothing, no error</li>
+      <li>Android 15 + FB Webview: Error toast "page cant be loaded"</li>
+      <li>ios 17:</li>
+      <li>ios 16.7 + IG Webview: nothing, no error</li>
     </ul>
     <hr/>
     <h1>Universal</h1>
@@ -52,8 +60,9 @@
       window.open
     </button>
     <ul>
-      <li>NO: Android + FB Webview</li>
-      <li>NO: ios + IG Webview</li>
+      <li>Android 15 + FB Webview: stays in webview</li>
+      <li>ios 17:</li>
+      <li>ios 16.7 + IG Webview:</li>
     </ul>
     <hr/>
     <h3>Using window.location.href:</h3>
@@ -61,8 +70,9 @@
       window.location.href
     </button>
     <ul>
-      <li>NO: Android + FB Webview</li>
-      <li>NO: ios + IG Webview</li>
+      <li>Android 15 + FB Webview: stays in webview</li>
+      <li>ios 17:</li>
+      <li>ios 16.7 + IG Webview</li>
     </ul>
   </body>
 </html>
