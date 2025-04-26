@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="src/style.css" />
     <script>
       console.log('useragent', window.navigator.userAgent);
-      document.getElementById('ua').innerHTML = window.navigator.userAgent;
+      document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('ua').innerHTML = window.navigator.userAgent;
+      })
     </script>
   </head>
   <body>
